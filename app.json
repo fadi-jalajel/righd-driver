@@ -8,41 +8,49 @@
     "scheme": "righddriver",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.righd.driver",
+      "googleServicesFile": "./GoogleService-Info.plist",
       "config": {
         "googleMapsApiKey": "GOOGLE_MAPS_IOS_KEY"
       }
     },
+
     "android": {
+      "package": "com.righd.driver",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.righd.driver",
       "config": {
         "googleMaps": {
           "apiKey": "GOOGLE_MAPS_ANDROID_KEY"
         }
       }
     },
+
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+
     "plugins": [
       "expo-router",
       "expo-secure-store"
     ],
+
     "experiments": {
       "typedRoutes": true
     }
