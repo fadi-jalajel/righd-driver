@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "WEB_API_KEY",
-  authDomain: "AUTH_DOMAIN",
-  projectId: "PROJECT_ID",
-  storageBucket: "STORAGE_BUCKET",
-  messagingSenderId: "MSG_SENDER_ID",
-  appId: "APP_ID"
+  apiKey: "AIzaSyD8Zzu3aOJGfmHmDRf9laDEHDsCigsGIDE",
+  authDomain: "righd-driver-dev.firebaseapp.com",
+  projectId: "righd-driver-dev",
+  storageBucket: "righd-driver-dev.firebasestorage.app",
+  messagingSenderId: "1074595568002",
+  appId: "1:1074595568002:web:0b54453f6322acd772d79b"
 };
 
 // Initialize Firebase

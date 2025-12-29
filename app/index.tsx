@@ -1,23 +1,14 @@
-import { authService } from "@/src/auth/authService";
-import { Button, Text, View } from "react-native";
+import { useAuthStore } from "@/store/authStore";
+import { Redirect } from "expo-router";
 
 export default function Index() {
-  const testSignup = async () => {
-    const user = await authService.signUp("test1@righd.com", "password123");
-    console.log("SIGNED UP:", user);
-  };
+  const { user, loading } = useAuthStore();
 
-  const testLogin = async () => {
-    const user = await authService.signIn("test1@righd.com", "password123");
-    console.log("SIGNED IN:", user);
-  };
+  if (loading) return null;
 
-  return (
-    <View style={{ padding: 40 }}>
-      <Text>Auth Test</Text>
+  if (!user) {
+    return <Redirect href="/login" />;
+  }
 
-      <Button title="Test Sign Up" onPress={testSignup} />
-      <Button title="Test Sign In" onPress={testLogin} />
-    </View>
-  );
+  return <Redirect href="/home" />;
 }
